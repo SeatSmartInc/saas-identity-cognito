@@ -8,7 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-4.3.1/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,24 +21,18 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-expand-lg navbar-light bg-light mb-4" role="navigation">
       <div class="container">
-        <div class="navbar-header">
+        <a class="navbar-brand" href="#/">
+          <img style="width:60px;" src="/images/logo@1x.png" alt="OrderNext Home">Profile Guard
+        </a>
 
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#js-navbar-collapse" aria-controls="js-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <a class="navbar-brand" href="#/">
-            <img style="width:60px;" src="/images/logo@1x.png" alt="OrderNext Home">Profile Guard
-          </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="js-navbar-collapse">
-          <ul class="nav navbar-nav navbar-right navbar-default menu">
+        <div class="collapse navbar-collapse justify-content-end ml-auto" id="js-navbar-collapse">
+          <ul class="nav navbar-nav navbar-light bg-light menu">
             <li ng-if="isLinkEnabled('/')" ng-class="{ active: isActiveLink('/') }"><a ng-href="#!">Home</a></li>
             <li ng-if="isLinkEnabled('/tenants')" ng-class="{ active: isActiveLink('/tenants') }"><a ng-href="#!/tenants">Tenants</a></li>
             <li ng-if="isLinkEnabled('/products')" ng-class="{ active: isActiveLink('/products') }"><a ng-href="#!/products">Catalog</a></li>
